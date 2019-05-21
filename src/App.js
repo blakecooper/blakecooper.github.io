@@ -1,25 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+		<p>Hi, my name's Blake cooper. A better, more website-looking website is coming soon. In the meantime, you can learn more about me on <a href="https://github.com/blakecooper">GitHub</a> or <a href="https://www.linkedin.com/in/blakecooper119/">LinkedIn</a>.</p>
+	</div>
   );
 }
 
