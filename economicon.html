@@ -34,7 +34,7 @@ $(document).ready(function(){
 		<br>2019-10-23</b></p>
 <h2><b>2. Welcome to Economicon!</b></h2>
 <p>While playing Economicon, you become the mightiest of all bureaucrats: the central banker. It is your sole responsibility to cultivate a strong, stable economy for your nation. Yet, despite the awesome power you wield, your challenges are many, and your tools are few.</p>
-<p>A game of Economicon lasts ten rounds, each representing a year in the history of your nation. At the end of ten rounds, the winner of Economicon is the player commanding the most valuable, and least volatile, economy. The value of your economy is measured by holdings in your <a href="#" id = "popover_centralReserveBank" data-toggle="popover" title="Central Reserve Bank" data-content="">central reserve bank</a>. Volatility is measured by volatility tokens. You cannot win Economicon if you hold three or greater volatility tokens.</p>
+<p>A game of Economicon lasts ten rounds, each representing a year in the history of your nation. At the end of ten rounds, the winner of Economicon is the player commanding the most valuable, and least volatile, economy. The value of your economy is measured by holdings in your <a href="#" id = "popover_reserveBank" data-toggle="popover" data-html="true" title="Reserve Bank" data-content="">reserve bank</a>. Volatility is measured by volatility tokens. You cannot win Economicon if you hold three or greater volatility tokens.</p>
 <p>As a central banker, your most basic tool is choosing a currency peg that determines the value of your currency. Whether your currency is pegged to the value of gold, a commodity, another player's currency, or nothing at all, you peg determines how much your currency is worth, and, therefore, how much you pay for things. Each peg also comes with unique privileges and challenges.</p>
 <p>Trading is the most powerful way central bankers increase the value of their reserve holdings. Bankers take turns purchasing gold, commodities or currency on the open market, paying an amount of gold or native currency based on the relative value of the units being purchased. Payments come from reserves, and go to the market. The amount of gold, currency and commodities available in the open market determine the value of these units, so strategically buying and selling them can dramatically impact the value of your (and the other bankers') economies.</p>
 <p>Each round, your nation's people will work to produce commodities, so that they can earn money with which to consume other commodities. You must be able to keep your citizenry employed and consuming. If you fail to meet either your production or consumption requirement (or both) in a given round, you gain one volatility token.</p>
@@ -61,8 +61,6 @@ $(document).ready(function(){
 <p>The player has the most valuable economy of all players without possessing greater than three volatility tokens is the winner.</p>
 
 <h2>4. Definitions</h2>
-<h3>Central reserve bank</h3>
-<div id="centralReserveBank"></div>
 
 <h3>Commodities</h3>
 
@@ -159,6 +157,9 @@ When necessary to follow an order of play, the order of play is determined as fo
 Each round during the production phase, your population must be put to work producing at least one of each type of commodity. Discard an amount of gold equal to the value of that commodity for each commodity you produce. The commodities you produce are sent to the market, unless otherwise directed by a law or global event.
 
 If at any time you cannot produce at least one of each commodity, gain a volatility token.
+
+<h3>Reserve bank</h3>
+<div id="reserveBank"></div>
 
 <h3>Rewards and penalties</h3>
 
