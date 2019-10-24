@@ -12,8 +12,14 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover(); 
+});
+</script>
+</head>
 <body>
 		<div class="container-fluid">
 				<div class="jumbotron">
@@ -28,7 +34,7 @@
 		<br>2019-10-23</b></p>
 <h2><b>2. Welcome to Economicon!</b></h2>
 <p>While playing Economicon, you become the mightiest of all bureaucrats: the central banker. It is your sole responsibility to cultivate a strong, stable economy for your nation. Yet, despite the awesome power you wield, your challenges are many, and your tools are few.</p>
-<p>A game of Economicon lasts ten rounds, each representing a year in the history of your nation. At the end of ten rounds, the winner of Economicon is the player commanding the most valuable, and least volatile, economy. The value of your economy is measured by holdings in your central reserve bank. Volatility is measured by volatility tokens. You cannot win Economicon if you hold three or greater volatility tokens.</p>
+<p>A game of Economicon lasts ten rounds, each representing a year in the history of your nation. At the end of ten rounds, the winner of Economicon is the player commanding the most valuable, and least volatile, economy. The value of your economy is measured by holdings in your <a href="#" id = "popover_centralReserveBank" data-toggle="popover" title="Central Reserve Bank" data-content="">central reserve bank</a>. Volatility is measured by volatility tokens. You cannot win Economicon if you hold three or greater volatility tokens.</p>
 <p>As a central banker, your most basic tool is choosing a currency peg that determines the value of your currency. Whether your currency is pegged to the value of gold, a commodity, another player's currency, or nothing at all, you peg determines how much your currency is worth, and, therefore, how much you pay for things. Each peg also comes with unique privileges and challenges.</p>
 <p>Trading is the most powerful way central bankers increase the value of their reserve holdings. Bankers take turns purchasing gold, commodities or currency on the open market, paying an amount of gold or native currency based on the relative value of the units being purchased. Payments come from reserves, and go to the market. The amount of gold, currency and commodities available in the open market determine the value of these units, so strategically buying and selling them can dramatically impact the value of your (and the other bankers') economies.</p>
 <p>Each round, your nation's people will work to produce commodities, so that they can earn money with which to consume other commodities. You must be able to keep your citizenry employed and consuming. If you fail to meet either your production or consumption requirement (or both) in a given round, you gain one volatility token.</p>
@@ -56,14 +62,7 @@
 
 <h2>4. Definitions</h2>
 <h3>Central reserve bank</h3>
-
-<p>A nation's central reserve bank is where all gold, commodities and currencies belonging to the nation are kept. 
-
-<p>The amount of gold held by bankers in their reserves determines the play order. The banker whose nation has the most gold gets to go first whenever the order of play matters. 
-
-<p>Bankers use gold and native currency in their reserves to make purchases in the market. When they do, they determine the relative value of their purchase and place that amount of gold or native currency in the market from their reserves.
-
-<p>At the end of the game, bankers count up the value of all gold, commodities and currency in their reserve, relative to gold (that is, the amount of gold in the market is the numerator in the value formula). If a banker has the most valuable reserves, without having three or greater volatility tokens, that banker wins the game.
+<div id="centralReserveBank"></div>
 
 <h3>Commodities</h3>
 
@@ -252,6 +251,7 @@ Have you play tested this game? What did you think? Fill out the play tester eva
 
 This version of the Economicon rules document is licensed under the Open Game License (OGL), which grants "permission to modify, copy, and redistribute" the information here, provided you follow the rules for share-alike and derivative works. Also, if you do modify, copy or redistribute this game, please let me know! Email contact@blake-cooper.com
 
+<script src="economicon/definitions.js"></script>
 		</div>
 </body>
 </html>
