@@ -16,9 +16,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 $(document).ready(function(){
-  $('[data-toggle="popover"]').popover(); 
+	$('[data-toggle="popover"]').popover({
+		html: true	
+	}); 
+
 });
 </script>
 </head>
@@ -32,8 +39,8 @@ $(document).ready(function(){
 				</div>
 <h2>Welcome to Economicon!</h2>
 <p>When playing Economicon, you assume the role of the mightiest of all bureaucrats: the central banker. The responsibility is yours, and yours alone, to ensure that your nation's economy is strong and stable. Yet, despite the awesome power you wield, your challenges are many, and your tools are few.</p>
-<p>A game of Economicon lasts ten <a href="#" id="popover_rounds" data-toggle="popover" data-html="true" title="Round" data-content="">rounds</a>. Each round, you'll strategically set your nation's <a href=#" id="popover_currencyPeg" data-toggle="popover" data-html="true" title="Currency Peg" data-content="">monetary policy</a>, encourage <a href="#" id="popover_production" data-toggle="popover" data-html="true" title="Production" data-content="">production</a> of goods from various sectors of your economy, then arrange to <a href="#" id="popover_trading" data-toggle="popover" data-html="true" title="Trading" data-content"">sell those goods on the global market</a>, all while contending with meddling lawmakers whose <a href="#" id="popover_laws" data-toggle="popover" data-html="true" title="Laws" data-content="">laws</a> may or may not help you achieve your goals. You'll also have to decide how (or whether) to work with bankers from other nations to respond to chaotic <a href=#" id="popover_globalEvents" data-toggle="popover" data-html="true" title="Global Events" data-content="">global events</a>, the outcomes of which could usher in a new era of prosperity for your nation... or ruin it!
-<p>At the end of ten rounds, the winner of Economicon is the player who has amassed the most valuable assets in their nation's <a href="#" id = "popover_reserveBank" data-toggle="popover" data-html="true" title="Reserve Bank" data-content="">reserve bank</a>... provided their economy isn't too volatile! You may receive <a href="#" id="popover_volatilityTokens" data-toggle="popover" data-html="true" title="Volatility Tokens" data-content="">volatility tokens</a> if your nation's citizens are unemployed, resources become scarce, or you break the law. No player can win the game with three or greater volatility tokens.</p>
+<p>A game of Economicon lasts ten rounds. Each round, you'll strategically set your nation's <a href=#" id="popover_currencyPeg" data-toggle="popover"  title="Currency Peg" data-content="">monetary policy</a>, encourage <a href="#" id="popover_production" data-toggle="popover"  title="Production" data-content="">production</a> of goods from various sectors of your economy, then arrange to <a href="#" id="popover_trading" data-toggle="popover"  title="Trading" data-content"">sell those goods on the global market</a>, all while contending with meddling lawmakers whose <a href="#" id="popover_laws" data-toggle="popover"  title="Laws" data-content="">laws</a> may or may not help you achieve your goals. You'll also have to decide how (or whether) to work with bankers from other nations to respond to chaotic <a href=#" id="popover_globalEvents" data-toggle="popover"  title="Global Events" data-content="">global events</a>, the outcomes of which could usher in a new era of prosperity for your nation... or ruin it!
+<p>At the end of ten rounds, the winner of Economicon is the player who has amassed the most valuable assets in their nation's <a href="#" id = "popover_reserveBank" data-toggle="popover"  title="Reserve Bank" data-content="">reserve bank</a>... provided their economy isn't too volatile! You may receive <a href="#" id="popover_volatilityTokens" data-toggle="popover"  title="Volatility Tokens" data-content="">volatility tokens</a> if your nation's citizens are unemployed, resources become scarce, or you break the law. No player can win the game with three or greater volatility tokens.</p>
 <p>The stakes are high, and every decision counts. Welcome to Economicon.
 <div class="bd-callout bd-callout-info">
 		<h4>Thank you (a disclaimer)</h4>
@@ -118,58 +125,43 @@ $(document).ready(function(){
 
 <h4>Order of play</h4>
 
-When necessary to follow an order of play, the order of play is determined as follows:
-1. The banker whose nation holds the highest amount of gold in reserves plays first, and play continues around the table clockwise from that banker.
-2. In the event of a tie, all bankers who tie roll a d6. The higher of the rolls goes first, and play continues around the table clockwise from that banker.
+<p>When necessary to follow an order of play, the order of play is determined as follows:
+<br>1. The banker whose nation holds the highest amount of gold in reserves plays first, and play continues around the table clockwise from that banker.
+<br>2. In the event of a tie, all bankers who tie roll a d6. The higher of the rolls goes first, and play continues around the table clockwise from that banker.
 
 <h4>Production</h4>
 <div id="production"></div>
 
 <h4>Production Requirement</h4>
 
-Each round during the production phase, your population must be put to work producing at least one of each type of commodity. Discard an amount of gold equal to the value of that commodity for each commodity you produce. The commodities you produce are sent to the market, unless otherwise directed by a law or global event.
+<p>Each round during the production phase, your population must be put to work producing at least one of each type of commodity. Discard an amount of gold equal to the value of that commodity for each commodity you produce. The commodities you produce are sent to the market, unless otherwise directed by a law or global event.
 
-If at any time you cannot produce at least one of each commodity, gain a volatility token.
+<p>If at any time you cannot produce at least one of each commodity, gain a volatility token.
 
 <h4>Reserve bank</h4>
 <div id="reserveBank"></div>
 
 <h4>Rewards and penalties</h4>
 
-If during a given round you complied with both your nation's production and consumption requirements, and its laws, you may add one gold to your reserves and remove one volatility token. Otherwise, gain a volatility token.
+<p>If during a given round you complied with both your nation's production and consumption requirements, and its laws, you may add one gold to your reserves and remove one volatility token. Otherwise, gain a volatility token.
 
 <h4>Resolving the global event</h4>
 
-The final action in a given round is to resolve the effects of the global event. The outcome will be specific to the event, and determined by whether the bankers were successful or failed in meeting their goal.
+<p>The final action in a given round is to resolve the effects of the global event. The outcome will be specific to the event, and determined by whether the bankers were successful or failed in meeting their goal.
 
 <h4>Tech</h4>
 
-Tech is one of three commodities.
+<p>Tech is one of three commodities.
 
 <h4>Trading</h4>
 <div id="trading"></div>
 
 <h4>Unit</h4>
 
-A unit refers to one counter of any type of currency, commodity or gold. 
+<p>A unit refers to one counter of any type of currency, commodity or gold. 
 
 <h4>Value</h4>
-
-<p>As in real life, the value of a gold, commodities and currency in Economicon is relative, based on supply and demand. The more scarce something is, the more you can expect to pay for it.
-
-<p>Using a currency peg is a way to assign a value for your currency other than its inherent scarcity. When using a peg, your currency is exactly as valuable as the unit you have pegged it to.
-
-<p>When determining how much a commodity costs in Economicon, use the following formula: 
-
-<p>The number of payment units available in the market
-<br>----------
-<p>the number of purchase units available in the market
-
-<p>Payment units refer to the unit you're using to pay for the purchase, most often gold or your nation's currency. If your currency is pegged to another unit, count that unit in the marketplace instead of your currency when using the value formula. Purchase units refer to the units you are purchasing on the open market.
-
-<p>Rounding: If the amount you're purchasing requires you to spend a fraction of your currency, round to the nearest whole number (excluding zero; you must always pay at least one unit of currency for a purchase).
-
-<p>Example: your nation is on the gold standard, and you want to buy five units of grain. There are five gold and 20 grain on the market, so the cost of grain in your currency is 5/20 = 1/4, so you may purchase four grain for one unit of your currency. Therefore your purchase of five grain would cost 1.25, which you would round down to 1. 
+<div id="value"></div>
 
 <h4>Volatility token</h4>
 <div id="volatilityTokens"></div>
