@@ -1,0 +1,95 @@
+/*!
+ * Start Bootstrap - The Big Picture (https://startbootstrap.com/templates/the-big-picture)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-the-big-picture/blob/master/LICENSE)
+ */
+:root {
+	--light-green: #94c37d;
+	--dark-green: #6AA753;
+}
+
+body {
+  background: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: white;
+	font-family: 'Work Sans', sans-serif;
+	font-size: large;
+}
+
+a:link, a:visited {
+	color: var(--light-green);
+}
+
+.logo {
+	width: inherit;
+	padding: 50px;
+}
+
+h1 {
+	font-weight: 600;
+}
+
+.well {
+	background-color: var(--dark-green);
+	color: white;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+.row {
+	position: absolute;
+	left: 20%;
+	right: 20%;
+	top: 40%;
+	-ms-transform: translateY(-40%);
+	transform: translateY(-40%);
+}
+
+.modal {
+	color: black;
+}
+
+.social {
+	padding-top: 5px;
+}
+
+.padded {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+a.welllink:link, hover {
+	color: white;
+}
+
+@media only screen and (max-width: 992px) {
+	.row {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		-ms-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+
+	.padded-mobile {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.well {
+		font-size: 1em;
+	}
+}
+
+.btn-success {
+	background-color: var(--dark-green);
+}
+
+.clearfix {
+	overflow: auto;
+}

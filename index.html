@@ -1,21 +1,73 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Blake Cooper</title>
-		<script src="js/utilities.js"></script>
-		<script>
-			function init() {
-				const textColor = getRandomColor();
+<html lang="en">
 
-				$('header').style = "color:#" + textColor;
-				$('para').style = "color:#" + textColor;
-				$('body').style = "background-color:#" + getRandomColor();
-				}
-		</script>
-	</head>
-	<body id="body" onload="init()">
-			<h1 id="header">Hi.</h1>
-			<p id="para">I'll admit it. This website is not very impressive. I've been busy at work on other projects; I assure you a more website-looking website is coming soon. In the meantime, you can visit <a href="https://www.linkedin.com/blakecooper119">my LinkedIn page</a> for my professional information, or check out <a href="https://www.github.com/blakecooper">my GitHub repo</a> to get a sense of what I've been working on.</a>
-	</body>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Home page for Lee Brenon, coach and owner of Brenon Fitness Systems">
+  <meta name="author" content="Blake Cooper">
+
+  <title>Brenon Fitness Systems</title>
+
+  <!-- Mailchimp form style-->
+  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	#mc_embed_signup form{background:inherit; font:inherit; padding: 0px;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	#mc_embedded_subscribe_form{padding: 0px;}
+	</style>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="icon" href="assets/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+  <!-- Page Content -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+			<img class="logo" src="assets/logo.png"></img>
+		</div>
+        <div class="col-lg-5 padded-mobile">
+		<h1 class="mt-5">Lee Brenon</h1>
+          <br>Buffalo, NY
+		  <p><a href="mailto:info@leebrenon.com" target="_blank">info@leebrenon.com</a></p>
+		  <p>I help busy adults master their fitness goals with effective training and nutrition.</p>
+		  <p>Book a <a href="https://www.calendly.com/lee_brenon/15min" target="_blank">free 15 minute consultation</a> today.</p>
+
+	<label for="email">Sign up for my email list (I write informative emails with training and nutrition info, philosophical life advice, and pictures of my dog):</label>
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://twitter.us7.list-manage.com/subscribe/post?u=e2379b692052f7e25c3a258a5&amp;id=af515c2e81" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mailchimp-form" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">	
+	<input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e2379b692052f7e25c3a258a5_af515c2e81" tabindex="-1" value=""></div>
+	<p><div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
+

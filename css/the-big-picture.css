@@ -1,0 +1,13 @@
+/*!
+ * Start Bootstrap - The Big Picture (https://startbootstrap.com/templates/the-big-picture)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-the-big-picture/blob/master/LICENSE)
+ */
+body {
+  background: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: white;
+}
