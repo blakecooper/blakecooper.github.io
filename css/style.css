@@ -32,6 +32,10 @@ h1 {
 	font-weight: 600;
 }
 
+.vertical-center {
+	transform: translateY(50%);
+}
+
 .well {
 	background-color: var(--dark-green);
 	color: white;
@@ -40,13 +44,18 @@ h1 {
 	font-size: 1.5em;
 }
 
-.row {
+.container {
 	position: absolute;
+	top: 20%;
 	left: 20%;
 	right: 20%;
-	top: 40%;
-	-ms-transform: translateY(-40%);
-	transform: translateY(-40%);
+}
+.row {
+	position: relative;
+}
+
+.navbar {
+	position: inline;
 }
 
 .modal {
@@ -66,7 +75,22 @@ a.welllink:link, hover {
 	color: white;
 }
 
+.navbar {
+}
+
+.testimonial-attribution {
+	text-align: right;
+	font-style: italic;
+}
+
 @media only screen and (max-width: 992px) {
+	.container {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+	}
+		
 	.row {
 		position: relative;
 		top: 0px;
